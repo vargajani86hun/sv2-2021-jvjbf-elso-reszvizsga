@@ -21,6 +21,14 @@ public class CarShop {
         return isCheap;
     }
 
+    public int sumCarPrice() {
+        int sum = 0;
+        for (Car c : cars) {
+            sum += c.getPrice();
+        }
+        return sum;
+    }
+
     public String getName() {
         return name;
     }
