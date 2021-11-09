@@ -45,6 +45,18 @@ public class CarShop {
         return amount;
     }
 
+    public List<Car> carsWithBrand(String brand) {
+        List<Car> results = new ArrayList<>();
+
+        for (Car c : cars) {
+            if (brand.equals(c.getBrand())) {
+                results.add(c);
+            }
+        }
+
+        return results;
+    }
+
     public String getName() {
         return name;
     }
