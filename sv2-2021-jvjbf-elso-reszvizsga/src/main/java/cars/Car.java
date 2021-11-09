@@ -3,10 +3,10 @@ package cars;
 public class Car {
     private String brand;
     private double engineSize;
-    private CarColors color;
+    private Color color;
     private int price;
 
-    public Car(String brand, double engineSize, CarColors color, int price) {
+    public Car(String brand, double engineSize, Color color, int price) {
         this.brand = brand;
         this.engineSize = engineSize;
         this.color = color;
@@ -25,7 +25,7 @@ public class Car {
         return engineSize;
     }
 
-    public CarColors getColor() {
+    public Color getColor() {
         return color;
     }
 

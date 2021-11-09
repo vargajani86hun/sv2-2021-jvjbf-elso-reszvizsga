@@ -1,5 +1,5 @@
 package cars;
 
-public enum CarColors {
+public enum Color {
     RED,BLACK,BLUE,GREY
 }

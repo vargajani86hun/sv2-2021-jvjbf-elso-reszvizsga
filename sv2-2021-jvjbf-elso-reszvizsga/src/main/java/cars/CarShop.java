@@ -6,7 +6,7 @@ import java.util.List;
 public class CarShop {
     private String name;
     private int maxPrice;
-    private List<Car> cars = new ArrayList<>();
+    private List<Car> carsForSell = new ArrayList<>();
 
     public CarShop(String name, int maxPrice) {
         this.name = name;
@@ -17,7 +17,7 @@ public class CarShop {
         boolean isCheap = maxPrice >= car.getPrice();
 
         if (isCheap) {
-            cars.add(car);
+            carsForSell.add(car);
         }
 
         return isCheap;
@@ -26,7 +26,7 @@ public class CarShop {
     public int sumCarPrice() {
         int sum = 0;
 
-        for (Car c : cars) {
+        for (Car c : carsForSell) {
             sum += c.getPrice();
         }
 
@@ -36,7 +36,7 @@ public class CarShop {
     public int numberOfCarsCheaperThan(int price) {
         int amount = 0;
 
-        for (Car c : cars) {
+        for (Car c : carsForSell) {
             if (price >= c.getPrice()){
                 amount ++;
             }
@@ -48,7 +48,7 @@ public class CarShop {
     public List<Car> carsWithBrand(String brand) {
         List<Car> results = new ArrayList<>();
 
-        for (Car c : cars) {
+        for (Car c : carsForSell) {
             if (brand.equals(c.getBrand())) {
                 results.add(c);
             }
@@ -65,7 +65,7 @@ public class CarShop {
         return maxPrice;
     }
 
-    public List<Car> getCars() {
-        return new ArrayList<>(cars);
+    public List<Car> getCarsForSell() {
+        return new ArrayList<>(carsForSell);
     }
 }
