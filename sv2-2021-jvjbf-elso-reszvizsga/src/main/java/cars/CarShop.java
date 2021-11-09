@@ -15,18 +15,34 @@ public class CarShop {
 
     public boolean addCar(Car car) {
         boolean isCheap = maxPrice >= car.getPrice();
+
         if (isCheap) {
             cars.add(car);
         }
+
         return isCheap;
     }
 
     public int sumCarPrice() {
         int sum = 0;
+
         for (Car c : cars) {
             sum += c.getPrice();
         }
+
         return sum;
+    }
+
+    public int numberOfCarsCheaperThan(int price) {
+        int amount = 0;
+
+        for (Car c : cars) {
+            if (price >= c.getPrice()){
+                amount ++;
+            }
+        }
+
+        return amount;
     }
 
     public String getName() {
